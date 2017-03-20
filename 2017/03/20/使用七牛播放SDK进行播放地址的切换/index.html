@@ -10,7 +10,7 @@
     
     <title>
         
-            将图片解析成YUV数据 | 
+            使用七牛播放SDK进行播放地址的切换 | 
         
         博乐在线
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="小博乐">
     <meta name="description" content="null">
-    <meta name="keywords" content="null,多媒体处理">
+    <meta name="keywords" content="null,android">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="将图片解析成YUV数据 | 博乐在线">
+    <meta property="og:title" content="使用七牛播放SDK进行播放地址的切换 | 博乐在线">
     <meta property="og:description" content="null">
-    <meta property="og:article:tag" content="多媒体处理"> 
+    <meta property="og:article:tag" content="android"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -229,7 +229,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RGB"><span class="post-toc-number">1.</span> <span class="post-toc-text">RGB</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#YUV数据"><span class="post-toc-number">2.</span> <span class="post-toc-text">YUV数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#将图片解析成YUV数据并推流"><span class="post-toc-number">3.</span> <span class="post-toc-text">将图片解析成YUV数据并推流</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PLVideoView-amp-PLTextureView"><span class="post-toc-number">1.</span> <span class="post-toc-text">PLVideoView & PLTextureView</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PLMediaPlayer"><span class="post-toc-number">2.</span> <span class="post-toc-text">PLMediaPlayer</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -265,7 +265,7 @@
         
     
             <p class="article-headline-p">
-                将图片解析成YUV数据
+                使用七牛播放SDK进行播放地址的切换
             </p>
         </div>
 
@@ -308,7 +308,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/多媒体处理/">多媒体处理</a>
+        <a class="post_tag-link" href="/tags/android/">android</a>
     </ul>
     
 
@@ -324,7 +324,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=将图片解析成YUV数据&url=http://yoursite.com//2017/03/20/将图片解析成YUV数据/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=使用七牛播放SDK进行播放地址的切换&url=http://yoursite.com//2017/03/20/使用七牛播放SDK进行播放地址的切换/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -333,7 +333,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=将图片解析成YUV数据&url=http://yoursite.com//2017/03/20/将图片解析成YUV数据/index.html&via=小博乐" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=使用七牛播放SDK进行播放地址的切换&url=http://yoursite.com//2017/03/20/使用七牛播放SDK进行播放地址的切换/index.html&via=小博乐" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -342,7 +342,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com//2017/03/20/将图片解析成YUV数据/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com//2017/03/20/使用七牛播放SDK进行播放地址的切换/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -351,7 +351,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2017/03/20/将图片解析成YUV数据/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2017/03/20/使用七牛播放SDK进行播放地址的切换/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -375,23 +375,13 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>最近在做图片推流的一个demo，涉及到了将图片解析成YUV原始数据进行推流，故参照网上的资料做了这样的一个总结。<br>首先，需要先了解一下RGB以及YUV数据的存储方式。</p>
-<h2 id="RGB"><a href="#RGB" class="headerlink" title="RGB"></a>RGB</h2><p>关于什么是RGB就不再在这里赘述了，这里主要说一些RGB的存储格式：</p>
-<ul>
-<li>RGB565：每个像素用16位表示，RGB分量分别使用5位、6位、5位</li>
-<li>RGB555：每个像素用16位表示，RGB分量都是用5位，剩下1位不用</li>
-<li>RGB24： 每个像素用24位表示，RGB各占8位</li>
-<li>RGB32： 每个像素用32位表示，RGB各占8位，剩下8位用作Alpha通道或者不用</li>
-<li>ARGB32：每个像素用32位表示，RGB各占8位，剩下8位表示Alpha通道值</li>
-</ul>
-<p>这个就是RGB格式的存储方式，这里我们要用到的就是ARGB32的这种。</p>
-<h2 id="YUV数据"><a href="#YUV数据" class="headerlink" title="YUV数据"></a>YUV数据</h2><p>YUV的数据存储方式有两大类：planar和packed。</p>
-<p>在采样方式上有三种：YUV4:4:4，YUV4:2:2，YUV4:2:0</p>
-<p>其具体的介绍可以从下面这篇文章做一个大致的了解：<br><a href="http://blog.csdn.net/yi412/article/details/50470250" target="_blank" rel="external">http://blog.csdn.net/yi412/article/details/50470250</a><br>同时，这篇文章中也介绍了将RGB转化成YUV和YCbCr的算法，我们就用这个算法来实现。</p>
-<h2 id="将图片解析成YUV数据并推流"><a href="#将图片解析成YUV数据并推流" class="headerlink" title="将图片解析成YUV数据并推流"></a>将图片解析成YUV数据并推流</h2><p>因为Android camera preview默认格式为NV21的，所以为了保证推流，就将图片解析成NV21的数据。<br>根据上述的YUV格式所链接的那篇文章，我们知道了如何将具体代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">byte</span> [] getNV21(<span class="keyword">int</span> inputWidth, <span class="keyword">int</span> inputHeight, Bitmap scaled) &#123;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> [] argb = <span class="keyword">new</span> <span class="keyword">int</span>[inputWidth * inputHeight];</div><div class="line"></div><div class="line">        <span class="comment">//该方法会返回一个ARGB格式的数组来存放像素文件</span></div><div class="line">        scaled.getPixels(argb, <span class="number">0</span>, inputWidth, <span class="number">0</span>, <span class="number">0</span>, inputWidth, inputHeight);</div><div class="line"></div><div class="line">        <span class="keyword">byte</span> [] yuv = <span class="keyword">new</span> <span class="keyword">byte</span>[inputWidth*inputHeight*<span class="number">3</span>/<span class="number">2</span>];</div><div class="line">        encodeYUV420SP(yuv, argb, inputWidth, inputHeight);</div><div class="line"></div><div class="line">        scaled.recycle();</div><div class="line"></div><div class="line">        <span class="keyword">return</span> yuv;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">encodeYUV420SP</span><span class="params">(<span class="keyword">byte</span>[] yuv420sp, <span class="keyword">int</span>[] argb, <span class="keyword">int</span> width, <span class="keyword">int</span> height)</span> </span>&#123;</div><div class="line">        <span class="keyword">final</span> <span class="keyword">int</span> frameSize = width * height;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> yIndex = <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> uvIndex = frameSize;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> a, R, G, B, Y, U, V;</div><div class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; height; j++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; width; i++) &#123;</div><div class="line"></div><div class="line">                <span class="comment">// 通过与操作以及移位的方式获取A、R、G、B等分量</span></div><div class="line">                a = (argb[index] &amp; <span class="number">0xff000000</span>) &gt;&gt; <span class="number">24</span>; </div><div class="line">                R = (argb[index] &amp; <span class="number">0xff0000</span>) &gt;&gt; <span class="number">16</span>;</div><div class="line">                G = (argb[index] &amp; <span class="number">0xff00</span>) &gt;&gt; <span class="number">8</span>;</div><div class="line">                B = (argb[index] &amp; <span class="number">0xff</span>) &gt;&gt; <span class="number">0</span>;</div><div class="line"></div><div class="line">                <span class="comment">// well known RGB to YUV algorithm</span></div><div class="line">                Y = ( (  <span class="number">66</span> * R + <span class="number">129</span> * G +  <span class="number">25</span> * B + <span class="number">128</span>) &gt;&gt; <span class="number">8</span>) +  <span class="number">16</span>;</div><div class="line">                U = ( ( -<span class="number">38</span> * R -  <span class="number">74</span> * G + <span class="number">112</span> * B + <span class="number">128</span>) &gt;&gt; <span class="number">8</span>) + <span class="number">128</span>;</div><div class="line">                V = ( ( <span class="number">112</span> * R -  <span class="number">94</span> * G -  <span class="number">18</span> * B + <span class="number">128</span>) &gt;&gt; <span class="number">8</span>) + <span class="number">128</span>;</div><div class="line"></div><div class="line">                <span class="comment">// NV21 has a plane of Y and interleaved planes of VU each sampled by a factor of 2</span></div><div class="line">                <span class="comment">//    meaning for every 4 Y pixels there are 1 V and 1 U.  Note the sampling is every other</span></div><div class="line">                <span class="comment">//    pixel AND every other scanline.</span></div><div class="line">                yuv420sp[yIndex++] = (<span class="keyword">byte</span>) ((Y &lt; <span class="number">0</span>) ? <span class="number">0</span> : ((Y &gt; <span class="number">255</span>) ? <span class="number">255</span> : Y));</div><div class="line">                <span class="comment">//</span></div><div class="line">                <span class="keyword">if</span> (j % <span class="number">2</span> == <span class="number">0</span> &amp;&amp; index % <span class="number">2</span> == <span class="number">0</span>) &#123;</div><div class="line">                    yuv420sp[uvIndex++] = (<span class="keyword">byte</span>)((V&lt;<span class="number">0</span>) ? <span class="number">0</span> : ((V &gt; <span class="number">255</span>) ? <span class="number">255</span> : V));</div><div class="line">                    yuv420sp[uvIndex++] = (<span class="keyword">byte</span>)((U&lt;<span class="number">0</span>) ? <span class="number">0</span> : ((U &gt; <span class="number">255</span>) ? <span class="number">255</span> : U));</div><div class="line">                &#125;</div><div class="line"></div><div class="line">                index ++;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<p>就这样，我们实现了将RGB格式的数据转化成NV21格式的数据，接下来就可以通过这个NV21数据来进行推流或者其他操作了。</p>
-<p><a href="http://stackoverflow.com/questions/5960247/convert-bitmap-array-to-yuv-ycbcr-nv21" target="_blank" rel="external">参考文章</a></p>
+        <p>首先，整体上了解一下七牛的播放端SDK：<br>七牛播放端SDK提供了三种视频播放器以及一个音频播放器，在这三种视频播放器中，PLVideoView和PLTextureView是七牛封装好的，接口比较简单，使用方便，其中PLVideoView是基于SurfaceView的控件，PLTextureView是基于TextureView的控件，而PLMediaPlayer类似于MediaPlayer，提供了播放器的核心功能，但是使用起来比较复杂，问题也容易多些。</p>
+<p>接下来，针对七牛播放器SDK的三种视频播放器的播放地址的切换，进行如下总结：</p>
+<h2 id="PLVideoView-amp-PLTextureView"><a href="#PLVideoView-amp-PLTextureView" class="headerlink" title="PLVideoView &amp; PLTextureView"></a>PLVideoView &amp; PLTextureView</h2><p>切换代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mVideoView.setVideoPath(mVideoPath);</div><div class="line">mVideoView.start();</div></pre></td></tr></table></figure></p>
+<p>也就是说直接切换地址，再重新start就可以了。不需要再prepare，prepare等操作都封装在里面了。</p>
+<h2 id="PLMediaPlayer"><a href="#PLMediaPlayer" class="headerlink" title="PLMediaPlayer"></a>PLMediaPlayer</h2><p>PLMediaPlayer不是一个View控件，因此，使用它播放视频的话需要自己在布局文件中定义一个SurfaceView或者TextureView的控件，然后将Surface或者SurfaceHolder传递给PLMediaPlayer。</p>
+<p>使用PLMediaPlayer进行播放地址切换的时候比较复杂。首先，要知道PLMediaPlayer是通过setDataSource方法进行播放地址的设置的，而调用setDataSource之前要调用reset方法对PLMediaPlayer进行重置，否则就会报出IllegalStateException的异常。至于为什么会报出这个异常，是因为PLMediaPlayer需要在IDLE的状态下才能调用setDataSource方法，而调用reset才会进入IDLE状态。想了解更多可以参考<a href="http://loody.github.io/2016/05/22/Android-MediaPlayer%E7%8A%B6%E6%80%81%E6%9C%BA/" target="_blank" rel="external">这篇文章</a>。其次，进入IDLE状态后需要进行重新的初始化。因此，切换播放地址的代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">changePlayUrl</span><span class="params">()</span> </span>&#123;</div><div class="line">    mVideoPath = <span class="string">"new path"</span></div><div class="line">    mMediaPlayer.stop();</div><div class="line">    mMediaPlayer.reset();</div><div class="line">    mMediaPlayer = <span class="keyword">null</span>;</div><div class="line">    prepare();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">prepare</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (mMediaPlayer != <span class="keyword">null</span>) &#123;</div><div class="line">            mMediaPlayer.setDisplay(mSurfaceView.getHolder());</div><div class="line">            <span class="keyword">if</span> (!mIsLiveStreaming) &#123;</div><div class="line">                mMediaPlayer.seekTo(mMediaPlayer.getCurrentPosition());</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            mMediaPlayer = <span class="keyword">new</span> PLMediaPlayer(<span class="keyword">this</span>, mAVOptions);</div><div class="line"></div><div class="line">            mMediaPlayer.setOnPreparedListener(mOnPreparedListener);</div><div class="line">            mMediaPlayer.setOnVideoSizeChangedListener(mOnVideoSizeChangedListener);</div><div class="line">            mMediaPlayer.setOnCompletionListener(mOnCompletionListener);</div><div class="line">            mMediaPlayer.setOnErrorListener(mOnErrorListener);</div><div class="line">            mMediaPlayer.setOnInfoListener(mOnInfoListener);</div><div class="line">            mMediaPlayer.setOnBufferingUpdateListener(mOnBufferingUpdateListener);</div><div class="line"></div><div class="line">            <span class="comment">// set replay if completed</span></div><div class="line">            <span class="comment">// mMediaPlayer.setLooping(true);</span></div><div class="line"></div><div class="line">            mMediaPlayer.setWakeMode(getApplicationContext(), PowerManager.PARTIAL_WAKE_LOCK);</div><div class="line"></div><div class="line">            mMediaPlayer.setDataSource(mVideoPath);</div><div class="line">            mMediaPlayer.setDisplay(mSurfaceView.getHolder());</div><div class="line">            mMediaPlayer.prepareAsync();</div><div class="line">        &#125; <span class="keyword">catch</span> (UnsatisfiedLinkError e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125; <span class="keyword">catch</span> (IllegalArgumentException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125; <span class="keyword">catch</span> (IllegalStateException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>上面就是使用七牛播放端SDK进行地址切换的方法，希望可以帮到大家。</p>
 
     
 
@@ -415,21 +405,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/03/20/使用七牛播放SDK进行播放地址的切换/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/03/13/使用ffprobe进行音视频流的分析（一）/" id="post_nav-older" class="next-content">
+        <a href="/2017/03/20/将图片解析成YUV数据/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
